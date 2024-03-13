@@ -24,7 +24,7 @@ spec:
             - name: vprodb-port
               containerPort: 3306
           env:
-            - name: MYSQL-ROOT_PASSWORD
+            - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: app-secret
@@ -43,5 +43,3 @@ spec:
           volumeMounts:
             - name: vpro-db-data
               mountPath: /var/lib/mysql
-
-
